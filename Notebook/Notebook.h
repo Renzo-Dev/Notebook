@@ -1,31 +1,48 @@
 ﻿#pragma once
-#include "/Users/danko/source/repos/Renzo-Dev/Renzo_Library/Renzo_Library/Renzo_Library/RenzoLib.h"
+#include <iostream>
+#include <conio.h>
+#include <boost/container/string.hpp>
+#include <boost/container/vector.hpp>
+#include <boost/date_time/local_time/local_date_time.hpp>
 
+using boost::container::string;
+using std::cout;
 
-using namespace renzo;
+enum { ENTER = 13, ESC = 27, UP = 72, DOWN = 80, LEFT = 75, RIGHT = 77 }; // to identify the keys
 
-struct Account
-{
-	string name; // Имя
-	string surname; // Фамилия
-	string email; // Почта
+class Account
+{public:
 
+	string phone_number;
+	string name;
+	string surname;
+	string patronymic;
+	string email;
 
-	// Дата Рождения
-	struct BirthDay 
-	{
-		int day = 01;
-		int month = 01;
-		int yaer = 2001;
-	};
-
+	int day = 0;
+	int month = 0;
+	int year = 0;
 };
 
 
 class Notebook
 {
+	int max_size_book_ = 51;
+
+	boost::container::vector<Account> accounts;
+
+	void add(); // Добавить в записную книжку
+
+	void remove(); // Удалить из записной книжки
+
+	void edit(); // Изменить в записной книжке
+
+	void show_data(); // Показать данные
+
+	void find(); // Найти по
+
 public:
 
-
+	void start(); // Главное Меню
 
 };

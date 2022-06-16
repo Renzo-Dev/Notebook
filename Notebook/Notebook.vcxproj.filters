@@ -23,13 +23,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd">
-      <Filter>Файлы ресурсов</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Notebook.h">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
